@@ -7,12 +7,13 @@
   "author": "<mkishagha@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node -r esm server",
-    "start:dev": "nodemon -r esm server"
+    "build": "node_modules/.bin/webpack",
+    "start": "yarn build && node -r esm server",
+    "start:dev": "yarn build && nodemon -r esm server"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
-    "babel-loader": "^8.0.6",
+    "babel-loader": "7",
     "babel-preset-react": "^6.24.1",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
@@ -31,6 +32,7 @@
     "esm": "^3.2.25",
     "express": "^4.17.1",
     "fancy-log": "^1.3.3",
+    "html-webpack-plugin": "^3.2.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1"
