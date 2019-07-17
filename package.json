@@ -10,9 +10,14 @@
     "build": "node_modules/.bin/webpack",
     "start": "yarn build && node -r esm server",
     "start:dev": "yarn build && nodemon -r esm server",
-    "webpack:watch": "npx webpack --watch"
+    "webpack:watch": "npx webpack --watch",
+    "css:watch": "npx postcss --watch ./src/public/css/main.css -o ./dist/main.css"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.5.0",
+    "babel-eslint": "^10.0.2",
+    "babel-plugin-react-css-modules": "^5.2.6",
+    "css-loader": "^3.0.0",
     "eslint": "^5.16.0",
     "eslint-config-airbnb": "^17.1.1",
     "eslint-config-prettier": "^6.0.0",
@@ -20,7 +25,8 @@
     "eslint-plugin-jsx-a11y": "^6.2.3",
     "eslint-plugin-prettier": "^3.1.0",
     "eslint-plugin-react": "^7.14.2",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "style-loader": "^0.23.1"
   },
   "dependencies": {
     "@babel/core": "7",
@@ -37,8 +43,10 @@
     "fancy-log": "^1.3.3",
     "html-webpack-plugin": "^3.2.0",
     "postcss": "^7.0.17",
-    "postcss-cli": "^6.1.2",
     "postcss-import": "^12.0.1",
+    "postcss-loader": "^3.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "postcss-url": "^8.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-router": "^5.0.1",

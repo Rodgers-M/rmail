@@ -19,9 +19,19 @@ module.exports = {
         test: /\.jsx?/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        query: {
+        options: {
           presets: ['@babel/preset-react', '@babel/preset-env'],
         },
+      },
+      {
+        test: /\.css$/,
+        use: [
+          { loader: 'style-loader' },
+          {
+            loader: 'css-loader',
+          },
+          { loader: 'postcss-loader' },
+        ],
       },
     ],
   },
