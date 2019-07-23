@@ -1,2 +1,4 @@
 @import './global.css';
 @import '../js/components/header/header-styles.css';
+@import '../js/components/app/app.css';
+@import '../js/components/navigation_bar/navigationBar.css';
